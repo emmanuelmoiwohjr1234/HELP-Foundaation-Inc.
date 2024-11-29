@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 76, 107, 84;    /* #4C6B54 Forest Green */
+    --color-secondary: 142, 116, 85; /* #8E7455 Warm Brown */
+    --color-accent: 233, 177, 47;    /* #E9B12F Golden Yellow */
+    --color-sky: 89, 156, 193;       /* #599CC1 Sky Blue */
+  }
+
+  /* Font imports */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+  /* Base styles */
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-sans text-neutral-900 antialiased;
+  }
+
+  /* Typography */
+  .font-handwritten {
+    font-family: 'Caveat', cursive;
+  }
+}
+
+@layer components {
+  /* Button styles */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-[rgb(var(--color-primary))] text-white hover:bg-[rgb(var(--color-primary))]/90
+           focus-visible:ring-[rgb(var(--color-primary))];
+  }
+
+  .btn-secondary {
+    @apply bg-[rgb(var(--color-secondary))] text-white hover:bg-[rgb(var(--color-secondary))]/90
+           focus-visible:ring-[rgb(var(--color-secondary))];
+  }
+
+  .btn-accent {
+    @apply bg-[rgb(var(--color-accent))] text-white hover:bg-[rgb(var(--color-accent))]/90
+           focus-visible:ring-[rgb(var(--color-accent))];
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+
+  /* Input styles */
+  .input {
+    @apply w-full px-4 py-2 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 
+           focus:ring-[rgb(var(--color-primary))] focus:border-transparent;
+  }
+
+  /* Link styles */
+  .link {
+    @apply text-[rgb(var(--color-primary))] hover:text-[rgb(var(--color-primary))]/80 
+           underline-offset-2 hover:underline transition-colors duration-200
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--color-primary))] 
+           focus-visible:ring-offset-2 rounded-sm;
+  }
+}
+
+@layer utilities {
+  /* Performance utilities */
+  .gpu {
+    @apply transform-gpu;
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Gradient utilities */
+  .gradient-primary {
+    @apply bg-gradient-to-r from-[rgb(var(--color-primary))] to-[rgb(var(--color-primary))]/80;
+  }
+
+  .gradient-secondary {
+    @apply bg-gradient-to-r from-[rgb(var(--color-secondary))] to-[rgb(var(--color-secondary))]/80;
+  }
+
+  .gradient-accent {
+    @apply bg-gradient-to-r from-[rgb(var(--color-accent))] to-[rgb(var(--color-accent))]/80;
+  }
+}
