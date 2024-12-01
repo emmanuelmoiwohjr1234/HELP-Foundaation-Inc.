@@ -4,7 +4,7 @@ import { UserPreferencesProvider } from './contexts/UserPreferences'
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load components
-const NavBar = lazy(() => import('./components/NavBar'));
+const NavBar = lazy(() => import('./components/Navbar'));
 const Hero = lazy(() => import('./components/Hero'));
 const Mission = lazy(() => import('./components/Mission'));
 const Projects = lazy(() => import('./components/Projects'));
