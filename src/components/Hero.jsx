@@ -15,7 +15,7 @@ import {
 const slides = [
   {
     id: 0,
-    title: "Welcome to HELP Foundation",
+    title: "Welcome to HELP Foundation Inc.",
     subtitle: "Empowering Communities, Transforming Lives",
     description: "Join us in our mission to create positive change and build stronger communities together. Partner with us to make a difference.",
     backgroundImage: "https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?auto=format&fit=crop&q=80",
@@ -73,7 +73,7 @@ const Hero = () => {
 
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6000);
+    }, 12000);
 
     return () => clearInterval(timer);
   }, [reducedMotion]);
@@ -109,7 +109,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
-                className="max-w-3xl"
+                className="max-w-4xl"
               >
                 <h2 className="text-5xl md:text-7xl font-handwritten text-white mb-4 drop-shadow-lg">
                   {slides[currentSlide].title}

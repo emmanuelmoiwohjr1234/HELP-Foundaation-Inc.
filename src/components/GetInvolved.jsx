@@ -220,7 +220,7 @@ const GetInvolved = () => {
         </div>
 
         {/* Testimonials Section */}
-        <Testimonials />
+        {/* <Testimonials /> */}
 
         {/* Modal Form */}
         <AnimatePresence>
@@ -262,7 +262,7 @@ const GetInvolved = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-dark transition-colors duration-300"
+            className="bg-[#5E6C56] text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-dark transition-colors duration-300"
           >
             Contact Us
           </motion.button>
